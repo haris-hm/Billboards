@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "billboards",
+  "version": "${version}",
+
+  "name": "Billboards",
+  "description": "A server-side Minecraft mod which allows players to display GIFs in the world.",
+  "authors": [],
+  "contact": {},
+
+  "license": "All-Rights-Reserved",
+  "icon": "assets/billboards/icon.png",
+
+  "environment": "server",
+  "entrypoints": {
+    "main": ["com.harismehuljic.billboards.Billboards"]
+  },
+
+  "mixins": [
+    "billboards.mixins.json"
+    ,{
+      "config": "billboards.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
